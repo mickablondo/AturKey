@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.1">
+    <persistence-unit name="aturkey-test">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>io.github.mickablondo.aturkey.AturKeyUpdaterTest$Product</class>
+        <class>io.github.mickablondo.aturkey.AturKeyUpdaterTest$IgnoreNullProduct</class>
+        <class>io.github.mickablondo.aturkey.AturKeyUpdaterTest$MisconfiguredProduct</class>
+        <class>io.github.mickablondo.aturkey.AturKeyUpdaterTest$PropertyAccessProduct</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:aturkey;DB_CLOSE_DELAY=-1"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+        </properties>
+    </persistence-unit>
+</persistence>
